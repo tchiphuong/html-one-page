@@ -1,0 +1,64 @@
+@import "avariables";
+
+*{
+    font-family: $font-family;
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    display: flex;
+    width: 1200px;
+    height: $height-menu;
+    margin: 0 auto;
+    justify-content: center;
+        .logo {
+            
+        }
+
+        .menu {
+            display: flex;
+            margin: 0 auto;
+
+            li{
+                list-style: none;
+                margin: 0 20px;
+                
+                a{
+                    text-decoration: none;
+                    line-height: $height-menu;
+                    color: $text-color;
+                }
+            }
+        }
+
+        .contact i{
+            margin: 0 5px;
+            vertical-align: middle;
+        }
+}
+
+.coming-soon{
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+
+    .content-coming-soon{
+        
+    display: flex;
+    }
+}
+
+.count-down{
+    color: #FFFFFF;
+
+    .text-top{
+        margin: 0 auto;
+        text-align: center;
+        font-size: 100px;
+    }
+
+    .countdown{
+        color: red;
+    }
+}

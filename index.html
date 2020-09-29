@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.min.css">
     <!-- reference your copy Font Awesome here (from our CDN or by hosting yourself) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -16,12 +17,24 @@
             <img src="./images/logo.png" alt="">
         </div>
         <div class="menu">
-            <li class="menu-item">Home</li>
-            <li class="menu-item">About</li>
-            <li class="menu-item">Page</li>
-            <li class="menu-item">Blog</li>
-            <li class="menu-item">Gallery</li>
-            <li class="menu-item">Contact</li>
+            <li class="menu-item">
+                <a href="#">Home</a>
+            </li>
+            <li class="menu-item">
+                <a href="#">About</a>
+            </li>
+            <li class="menu-item">
+                <a href="#">Page</a>
+            </li>
+            <li class="menu-item">
+                <a href="#">Blog</a>
+            </li>
+            <li class="menu-item">
+                <a href="#">Gallery</a>
+            </li>
+            <li class="menu-item">
+                <a href="#">Contact</a>
+            </li>
         </div>
         <div class="contact">
             <i class="fa fa-facebook"></i>
@@ -33,32 +46,75 @@
 
     <!-- Count Down -->
     <div class="count-down">
-        <div class="parallax-window" data-parallax="scroll" data-image-src="./images/player-left-bg.png">
-            ví dụ ảnh chạy
+        <div class="parallax-window" data-parallax="scroll" data-image-src="./images/a.jpg">
+            <div class="text-top">
+                Coming Soon
+            </div>
+            <div id="clock">
+                <ul class="countdown">
+                    <li>
+                        <span class="days">00</span>
+                        <p class="days_ref">days</p>
+                    </li>
+                    <li>
+                        <span class="hours">00</span>
+                        <p class="hours_ref">hours</p>
+                    </li>
+                    <li>
+                        <span class="minutes">00</span>
+                        <p class="minutes_ref">minutes</p>
+                    </li>
+                    <li>
+                        <span class="seconds">00</span>
+                        <p class="seconds_ref">seconds</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="text-bottom">
+                Our Website Is Almost Ready
+            </div>
         </div>
     </div>
     <div class="coming-soon">
         <div class="head">
-            <h1>Under Construction<h1>
+            <span><b>Under</b> Construction</span>
         </div>
-        <div class="left">
-            <img src="./images/coming-soon-bg.jpg" width="540px" height="630px" alt="">
-        </div>
-        <div class="right">
-            <h2>Our Website Is Almost Ready</h2>
-            <h3>TIME LEFT UNTIL LAUNCHING</h3>
-            <div class="count-down">Day</div>
-            <div class="count-down">Hours</div>
-            <div class="count-down">Minutes</div>
-            <div class="count-down">Seconds</div>
-            <p>We are preparing something amazing and exciting for you. Special surprise for our subscribers only.</p>
-            <input type="text">
-            <div class="icon">
-                <i class="fa fa-facebook"></i>
-                <i class="fa fa-instagram"></i>
-                <i class="fa fa-twitter"></i>
-                <i class="fa fa-whatsapp"></i>
-                
+        <div class="content-coming-soon">
+            <div class="left">
+                <img src="./images/coming-soon-bg.jpg" width="540px" height="630px" alt="">
+            </div>
+            <div class="right">
+                <h2>Our Website Is Almost Ready</h2>
+                <h3>TIME LEFT UNTIL LAUNCHING</h3>
+                <div id="clock">
+                    <ul class="countdown">
+                        <li>
+                            <span class="days">00</span>
+                            <p class="days_ref">days</p>
+                        </li>
+                        <li>
+                            <span class="hours">00</span>
+                            <p class="hours_ref">hours</p>
+                        </li>
+                        <li>
+                            <span class="minutes">00</span>
+                            <p class="minutes_ref">minutes</p>
+                        </li>
+                        <li>
+                            <span class="seconds">00</span>
+                            <p class="seconds_ref">seconds</p>
+                        </li>
+                    </ul>
+                </div>
+                <p>We are preparing something amazing and exciting for you. Special surprise for our subscribers only.</p>
+                <input type="text">
+                <div class="icon">
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-instagram"></i>
+                    <i class="fa fa-whatsapp"></i>
+                    
+                </div>
             </div>
         </div>
     </div>
@@ -67,8 +123,21 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
     
+    
     <!-- Main script -->
     <script src="./js/main.js"></script>
-    
+
+    <!-- Scripts Count-down -->
+    <div id="getting-started"></div>
+    <script src="./js/libs/count-down.js"></script>
+    <script type="text/javascript">
+         $('.countdown').downCount({
+            date: '06/10/2021 12:00:00',
+            offset: +10
+        }, function () {
+            alert('WOOT WOOT, done!');
+        });
+    </script>
+
 </body>
 </html>
