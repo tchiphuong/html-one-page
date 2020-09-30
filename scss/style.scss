@@ -4,11 +4,12 @@
     font-family: $font-family;
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
 .header{
     display: flex;
-    width: 1200px;
+    width: $width;
     height: $height-menu;
     margin: 0 auto;
     justify-content: center;
@@ -43,14 +44,63 @@
     margin: 0 auto;
     text-align: center;
 
+    .head{
+        margin: 50px 0px;
+        .header-text, b{
+            font-size: 3rem;
+            color: #696969;
+        }
+        .divider-center {
+            height: 4px;
+            width: 70px;
+            background-image: -webkit-gradient(linear, left top, right top, from(#5192e1), color-stop(51%, #23ced5), to(#5192e1));
+            display: block;
+            margin: 10px auto;
+        }
+    }
+
     .content-coming-soon{
-        
-    display: flex;
+        display: flex;
+        .left{
+
+        }
+
+        .right{
+            .text-top{
+                color: #24cdd5;
+                margin: 10px auto;
+                font-size: 30px;
+                font-weight: regular;
+                display: block;
+            }
+
+            .text-bottom{
+                margin: 20px auto;
+                font-size: 20px;
+                font-weight: regular;
+                display: block;
+            }
+
+            .countdown{
+                display: flex;
+                justify-content: center;
+                color: #5192e1;
+
+                li{
+                    margin: 20px;
+                }
+
+                .numbers{
+                    font-size: 70px;
+                }
+            }
+        }
     }
 }
 
 .count-down{
     color: #FFFFFF;
+    text-align: center;
 
     .text-top{
         margin: 0 auto;
@@ -59,6 +109,38 @@
     }
 
     .countdown{
-        color: red;
+        display: flex;
+        justify-content: center;
+
+        li{
+            list-style: none;
+            margin: 50px 0px;
+
+            p{
+                text-overflow: uppercase;        
+            }
+        }
+
+        .days, .hours, .minutes, .seconds{
+            font-size: 80px;
+            margin: 0 20px;
+        }
+    }
+
+    .clock{
+    }
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background: #26313c;
+    color: #ffffff;
+    margin: 0 auto;
+    padding: 100px;
+    .col{
+        width: 350px;
+        font-size: 12px;
     }
 }

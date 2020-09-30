@@ -80,10 +80,10 @@
           seconds = (String(seconds).length >= 2) ? seconds : '0' + seconds;
 
           // based on the date change the refrence wording
-          var ref_days = (days === 1) ? 'day' : 'days',
-              ref_hours = (hours === 1) ? 'hour' : 'hours',
-              ref_minutes = (minutes === 1) ? 'minute' : 'minutes',
-              ref_seconds = (seconds === 1) ? 'second' : 'seconds';
+          var ref_days = (days === 1) ? 'DAY' : 'DAYS',
+              ref_hours = (hours === 1) ? 'HOUR' : 'HOURS',
+              ref_minutes = (minutes === 1) ? 'MINUTE' : 'MINUTES',
+              ref_seconds = (seconds === 1) ? 'SECOND' : 'SECONDS';
 
           // set to DOM
           container.find('.days').text(days);
